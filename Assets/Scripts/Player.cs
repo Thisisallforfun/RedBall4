@@ -10,10 +10,12 @@ public class Player : MonoBehaviour
     [SerializeField] private float jumpSpeed = 10f;
     Rigidbody2D rb;
     private Vector2 moveInput;
+    CircleCollider2D bodyColl;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        bodyColl = GetComponent<CircleCollider2D>();
     }
 
     private void Update()
@@ -36,10 +38,10 @@ public class Player : MonoBehaviour
 
     void OnJump(InputValue value)
     {
-        if (value.isPressed)
+        bool isStanding = bodyColl.IsTouchingLayers(LayerMask.GetMask("Ground"));
+        if (value.isPressed && isStanding)
         {
             rb.velocity += new Vector2(0f, jumpSpeed);
         }
     }
-
 }
