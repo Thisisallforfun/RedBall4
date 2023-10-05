@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Star
   layers:
   - Default
   - TransparentFX
@@ -15,8 +16,8 @@ TagManager:
   - Ground
   - Enemy
   - Background
-  - 
-  - 
+  - Pickups
+  - Subplatform
   - 
   - 
   - 
@@ -46,6 +47,9 @@ TagManager:
     locked: 0
   - name: Ground
     uniqueID: 1262715651
+    locked: 0
+  - name: Pickups
+    uniqueID: 1403991379
     locked: 0
   - name: Player
     uniqueID: 851559095

@@ -38,7 +38,7 @@ public class Player : MonoBehaviour
 
     void OnJump(InputValue value)
     {
-        bool isStanding = bodyColl.IsTouchingLayers(LayerMask.GetMask("Ground"));
+        bool isStanding = bodyColl.IsTouchingLayers(LayerMask.GetMask("Ground", "Subplatform"));
         if (value.isPressed && isStanding)
         {
             rb.velocity += new Vector2(0f, jumpSpeed);
