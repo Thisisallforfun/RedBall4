@@ -16,6 +16,6 @@ public class GameUI : MonoBehaviour
 
     private void Update()
     {
-        scoreText.text = scoreKeeper.GetScore().ToString("00000");
+        scoreText.text = scoreKeeper.GetScore().ToString("000");
     }
 }

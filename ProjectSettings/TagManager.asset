@@ -18,7 +18,7 @@ TagManager:
   - Background
   - Pickups
   - Subplatform
-  - 
+  - Water
   - 
   - 
   - 
@@ -44,6 +44,9 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 2945304067
+    locked: 0
+  - name: Water
+    uniqueID: 929656105
     locked: 0
   - name: Ground
     uniqueID: 1262715651
