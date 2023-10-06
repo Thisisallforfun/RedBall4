@@ -48,6 +48,9 @@ TagManager:
   - name: Ground
     uniqueID: 1262715651
     locked: 0
+  - name: Enemy
+    uniqueID: 3503989977
+    locked: 0
   - name: Pickups
     uniqueID: 1403991379
     locked: 0
