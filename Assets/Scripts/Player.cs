@@ -44,4 +44,12 @@ public class Player : MonoBehaviour
             rb.velocity += new Vector2(0f, jumpSpeed);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Finish")
+        {
+            Debug.Log("Complete level!");
+        }
+    }
 }

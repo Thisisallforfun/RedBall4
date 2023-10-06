@@ -36,4 +36,9 @@ public class ScoreKeeper : MonoBehaviour
 
         Debug.Log($"Score: {score}");
     }
+
+    public int GetScore()
+    {
+        return score;
+    }
 }
