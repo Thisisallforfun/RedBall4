@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 10f;
     [SerializeField] private float jumpSpeed = 10f;
-    Rigidbody2D rb;
+    public Rigidbody2D rb;
     private Vector2 moveInput;
     CircleCollider2D bodyColl;
 
@@ -38,6 +38,7 @@ public class Player : MonoBehaviour
     void OnJump(InputValue value)
     {
         bool isStanding = bodyColl.IsTouchingLayers(LayerMask.GetMask("Ground", "Subplatform"));
+
         if (value.isPressed && isStanding)
         {
             rb.velocity += new Vector2(0f, jumpSpeed);
