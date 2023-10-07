@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 92
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RollBox_6
+      name: RollBox_Idle_1
       rect:
         serializedVersion: 2
         x: 457
@@ -144,7 +144,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RollBox_27
+      name: RollBox_Idle_2
       rect:
         serializedVersion: 2
         x: 457
@@ -165,7 +165,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RollBox_58
+      name: RollBox_Idle_3
       rect:
         serializedVersion: 2
         x: 455
@@ -186,7 +186,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RollBox_82
+      name: RollBox_Idle_4
       rect:
         serializedVersion: 2
         x: 455
@@ -270,7 +270,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RollBox_105
+      name: RollBox_Idle_5
       rect:
         serializedVersion: 2
         x: 454
@@ -417,7 +417,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RollBox_114
+      name: RollBox_Idle_6
       rect:
         serializedVersion: 2
         x: 454
@@ -630,7 +630,7 @@ TextureImporter:
       name: RollBox_124
       rect:
         serializedVersion: 2
-        x: 448
+        x: 450
         y: 61
         width: 60
         height: 59
@@ -824,7 +824,7 @@ TextureImporter:
         width: 144
         height: 114
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -845,7 +845,7 @@ TextureImporter:
         width: 144
         height: 111
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -866,7 +866,7 @@ TextureImporter:
         width: 147
         height: 118
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -887,7 +887,7 @@ TextureImporter:
         width: 151
         height: 122
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -908,7 +908,7 @@ TextureImporter:
         width: 153
         height: 126
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -939,7 +939,6 @@ TextureImporter:
       RollBox_102: 1921129316
       RollBox_103: -2005903083
       RollBox_104: 830344885
-      RollBox_105: -493579466
       RollBox_106: 970360043
       RollBox_107: 106837658
       RollBox_108: -1460471165
@@ -949,7 +948,6 @@ TextureImporter:
       RollBox_111: -374740985
       RollBox_112: 786326958
       RollBox_113: -2005015213
-      RollBox_114: 544197433
       RollBox_115: -837993755
       RollBox_116: -1365089817
       RollBox_117: -80617886
@@ -984,7 +982,6 @@ TextureImporter:
       RollBox_24: 55309236
       RollBox_25: 323637165
       RollBox_26: 526197742
-      RollBox_27: -1468739333
       RollBox_28: 1902711235
       RollBox_29: -1442886198
       RollBox_3: -70230550
@@ -1018,9 +1015,7 @@ TextureImporter:
       RollBox_55: -802250056
       RollBox_56: 1164570336
       RollBox_57: -785036627
-      RollBox_58: -328285203
       RollBox_59: -1851511003
-      RollBox_6: -1939886836
       RollBox_60: 557871247
       RollBox_61: 1304775736
       RollBox_62: -1481028317
@@ -1045,7 +1040,6 @@ TextureImporter:
       RollBox_8: -695925997
       RollBox_80: 1863659675
       RollBox_81: -1993930413
-      RollBox_82: -161298876
       RollBox_83: -1311590968
       RollBox_84: -1998132609
       RollBox_85: 1023200843
@@ -1064,6 +1058,12 @@ TextureImporter:
       RollBox_97: -2134103
       RollBox_98: -200003885
       RollBox_99: -1036780402
+      RollBox_Idle_1: -1939886836
+      RollBox_Idle_2: -1468739333
+      RollBox_Idle_3: -328285203
+      RollBox_Idle_4: -161298876
+      RollBox_Idle_5: -493579466
+      RollBox_Idle_6: 544197433
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

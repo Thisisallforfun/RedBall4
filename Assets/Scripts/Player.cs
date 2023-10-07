@@ -7,10 +7,14 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 10f;
-    [SerializeField] private float jumpSpeed = 10f;
+    [SerializeField] private float maxSpeed = 20f;
+    [SerializeField] private float speedUp = 0.5f;
+    [SerializeField] private float speedDown = 0.5f;
+    [SerializeField] public float jumpSpeed = 10f;
     public Rigidbody2D rb;
-    private Vector2 moveInput;
+    [SerializeField] private Vector2 moveInput;
     CircleCollider2D bodyColl;
+    public bool isFalling = false;
 
     private void Start()
     {
@@ -21,6 +25,8 @@ public class Player : MonoBehaviour
     private void Update()
     {
         Run();
+        isFalling = rb.velocity.y < -0.01f;
+        // Debug.Log(isFalling);
     }
 
     void OnMove(InputValue value)
@@ -30,7 +36,24 @@ public class Player : MonoBehaviour
 
     void Run()
     {
-        // Change player's speed
+        if (moveInput.x != 0)
+        {
+            moveSpeed += speedUp;
+        }
+        else
+        {
+            moveSpeed -= speedDown;
+            if (moveSpeed <= 0)
+            {
+                moveSpeed = 0;
+            }
+        }
+
+        if (moveSpeed > maxSpeed)
+        {
+            moveSpeed = maxSpeed;
+        }
+
         Vector2 playerVelocity = new Vector2(moveInput.x * moveSpeed, rb.velocity.y);
         rb.velocity = playerVelocity;
     }

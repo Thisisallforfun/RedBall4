@@ -7,6 +7,7 @@ public class Health : MonoBehaviour
     [SerializeField] private bool isPlayer;
     [SerializeField] private int health = 5;
     [SerializeField] private int score = 10;
+    [SerializeField] private float hurtForce = 5f;
     ScoreKeeper scoreKeeper;
     Player player;
     Animator anim;
@@ -35,7 +36,8 @@ public class Health : MonoBehaviour
     {
         if (!isPlayer)
         {
-            anim.SetBool("isDestroy", true);
+            // anim.SetBool("isDestroy", true);
+            anim.SetTrigger("isDead");
             scoreKeeper.ModifyScore(score);
             StartCoroutine(EnemyDead());
         }
@@ -67,7 +69,7 @@ public class Health : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            if (player.rb.velocity.y < 0f)
+            if (player.isFalling)
             {
                 TakeDamage();
             }
@@ -76,6 +78,32 @@ public class Health : MonoBehaviour
 
     void InteractWithEnemy(Collision2D other)
     {
-        return;
+        if (other.gameObject.tag == "Enemy")
+        {
+            if (player.isFalling)
+            {
+                player.rb.velocity += new Vector2(0f, player.jumpSpeed);
+            }
+            else
+            {
+                float posX = player.transform.position.x;
+                float posY = player.transform.position.y;
+
+                // Player is at the left of the enemy
+                if (posX < other.gameObject.transform.position.x)
+                {
+                    player.transform.position = new Vector2(posX - hurtForce, posY);
+                }
+                else if (posX >= other.gameObject.transform.position.x)
+                {
+                    player.transform.position = new Vector2(posX + hurtForce, posY);
+                }
+
+                // Set Animation
+
+                TakeDamage();
+            }
+        }
+
     }
 }
