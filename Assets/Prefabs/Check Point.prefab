@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2558845343553789226}
   - component: {fileID: 4658591222720368525}
   m_Layer: 0
-  m_Name: Finish Line
+  m_Name: Check Point
   m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

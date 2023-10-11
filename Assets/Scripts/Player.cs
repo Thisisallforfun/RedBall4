@@ -15,6 +15,12 @@ public class Player : MonoBehaviour
     [SerializeField] private Vector2 moveInput;
     CircleCollider2D bodyColl;
     public bool isFalling = false;
+    AudioPlayer audioPlayer;
+
+    void Awake()
+    {
+        audioPlayer = FindObjectOfType<AudioPlayer>();
+    }
 
     private void Start()
     {
@@ -64,6 +70,7 @@ public class Player : MonoBehaviour
 
         if (value.isPressed && isStanding)
         {
+            audioPlayer.PlayJumpingClip();
             rb.velocity += new Vector2(0f, jumpSpeed);
         }
     }
