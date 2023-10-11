@@ -94,16 +94,24 @@ public class Health : MonoBehaviour
                 {
                     player.transform.position = new Vector2(posX - hurtForce, posY);
                 }
+                // Player is at the right of the enemy
                 else if (posX >= other.gameObject.transform.position.x)
                 {
                     player.transform.position = new Vector2(posX + hurtForce, posY);
                 }
 
                 // Set Animation
-
+                StartCoroutine(SetAnimation());
                 TakeDamage();
             }
         }
+    }
 
+    IEnumerator SetAnimation()
+    {
+        anim.SetBool("isHurting", true);
+
+        yield return new WaitForSeconds(0.5f);
+        anim.SetBool("isHurting", false);
     }
 }

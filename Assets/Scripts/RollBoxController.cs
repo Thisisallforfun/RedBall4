@@ -29,6 +29,6 @@ public class RollBoxController : MonoBehaviour
 
     private void FlipEnemyFacing()
     {
-        transform.localScale = new Vector3(1f, -Mathf.Sign(rb.velocity.y), 0f);
+        transform.localScale = new Vector3(1f, -Mathf.Sign(rb.velocity.x), 0f);
     }
 }
