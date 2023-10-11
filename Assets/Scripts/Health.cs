@@ -12,10 +12,13 @@ public class Health : MonoBehaviour
     Player player;
     Animator anim;
 
+    AudioPlayer audioPlayer;
+
     private void Awake()
     {
         scoreKeeper = FindObjectOfType<ScoreKeeper>();
         player = FindObjectOfType<Player>();
+        audioPlayer = FindObjectOfType<AudioPlayer>();
     }
 
     void Start()
@@ -100,9 +103,13 @@ public class Health : MonoBehaviour
                     player.transform.position = new Vector2(posX + hurtForce, posY);
                 }
 
+                // Play audio clip
+                audioPlayer.GetInstance().PlayHurtClip();
+
                 // Set Animation
                 StartCoroutine(SetAnimation());
                 TakeDamage();
+
             }
         }
     }

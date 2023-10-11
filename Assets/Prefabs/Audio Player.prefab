@@ -143,3 +143,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpingClip: {fileID: 8300000, guid: 2a185369ac50a274bb0b20536cd80fa2, type: 3}
   jumpVolume: 1
+  hurtClip: {fileID: 8300000, guid: 0124f6578d47dcf409feb7368d725fad, type: 3}
+  hurtVolume: 1
+  finishClip: {fileID: 8300000, guid: cb246d271a98c554fa2c66ca73ffdb2d, type: 3}
+  finishVolume: 1
+  starClip: {fileID: 8300000, guid: 78745478aebbdee42939ddd1943fbdf7, type: 3}
+  starVolume: 1

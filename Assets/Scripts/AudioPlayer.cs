@@ -8,9 +8,19 @@ public class AudioPlayer : MonoBehaviour
     [SerializeField] AudioClip jumpingClip;
     [SerializeField][Range(0f, 1f)] float jumpVolume = 1f;
 
+
+    [Header("Hurt")]
+    [SerializeField] AudioClip hurtClip;
+    [SerializeField][Range(0f, 1f)] float hurtVolume = 1f;
+
     [Header("Finish Level")]
     [SerializeField] AudioClip finishClip;
     [SerializeField][Range(0f, 1f)] float finishVolume = 1f;
+
+
+    [Header("Pick up")]
+    [SerializeField] AudioClip starClip;
+    [SerializeField][Range(0f, 1f)] float starVolume = 1f;
 
     static AudioPlayer instance;
 
@@ -51,10 +61,18 @@ public class AudioPlayer : MonoBehaviour
         PlayClip(jumpingClip, jumpVolume);
     }
 
+    public void PlayHurtClip()
+    {
+        PlayClip(hurtClip, hurtVolume);
+    }
+
     public void PlayFinishClip()
     {
         PlayClip(finishClip, finishVolume);
     }
 
-
+    public void PlayStarClip()
+    {
+        PlayClip(starClip, starVolume);
+    }
 }

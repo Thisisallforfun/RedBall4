@@ -9,10 +9,12 @@ public class Star : MonoBehaviour
     [SerializeField] private float rotateSpeed = 10f;
     bool wasColected = false;
     ScoreKeeper scoreKeeper;
+    AudioPlayer audioPlayer;
 
     void Awake()
     {
         scoreKeeper = FindObjectOfType<ScoreKeeper>();
+        audioPlayer = FindObjectOfType<AudioPlayer>();
     }
 
     void Update()
@@ -24,6 +26,7 @@ public class Star : MonoBehaviour
     {
         if (other.gameObject.tag == "Player" && !wasColected)
         {
+            audioPlayer.GetInstance().PlayStarClip();
             wasColected = true;
             scoreKeeper.ModifyScore(scoreValue);
             Destroy(gameObject);
