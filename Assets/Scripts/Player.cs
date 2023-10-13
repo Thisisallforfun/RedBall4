@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     CircleCollider2D bodyColl;
     public bool isFalling = false;
     AudioPlayer audioPlayer;
+    private float defaultSpeed = 0f;
 
     void Awake()
     {
@@ -26,13 +27,13 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         bodyColl = GetComponent<CircleCollider2D>();
+        defaultSpeed = moveSpeed;
     }
 
     private void Update()
     {
         Run();
         isFalling = rb.velocity.y < -0.01f;
-        // Debug.Log(isFalling);
     }
 
     void OnMove(InputValue value)
@@ -51,7 +52,7 @@ public class Player : MonoBehaviour
             moveSpeed -= speedDown;
             if (moveSpeed <= 0)
             {
-                moveSpeed = 0;
+                moveSpeed = defaultSpeed;
             }
         }
 

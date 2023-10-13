@@ -34,6 +34,7 @@ public class NextLevel : MonoBehaviour
             nextScenceIndex = 0;
             // Task: go to Win scence
         }
+
         // FindObjectOfType<ScenePersist>().ResetScenePersist();
         SceneManager.LoadScene(nextScenceIndex);
     }

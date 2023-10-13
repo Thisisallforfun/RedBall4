@@ -39,7 +39,6 @@ public class Health : MonoBehaviour
     {
         if (!isPlayer)
         {
-            // anim.SetBool("isDestroy", true);
             anim.SetTrigger("isDead");
             scoreKeeper.ModifyScore(score);
             StartCoroutine(EnemyDead());
@@ -108,8 +107,9 @@ public class Health : MonoBehaviour
 
                 // Set Animation
                 StartCoroutine(SetAnimation());
-                TakeDamage();
 
+                // Damage
+                TakeDamage();
             }
         }
     }
