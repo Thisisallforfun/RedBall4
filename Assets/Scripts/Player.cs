@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     public bool isFalling = false;
     AudioPlayer audioPlayer;
     private float defaultSpeed = 0f;
+    public bool isAlive = true;
 
     void Awake()
     {
@@ -43,6 +44,8 @@ public class Player : MonoBehaviour
 
     void Run()
     {
+        if (!isAlive) return;
+
         if (moveInput.x != 0)
         {
             moveSpeed += speedUp;
@@ -67,6 +70,7 @@ public class Player : MonoBehaviour
 
     void OnJump(InputValue value)
     {
+        if (!isAlive) return;
         bool isStanding = bodyColl.IsTouchingLayers(LayerMask.GetMask("Ground", "Subplatform"));
 
         if (value.isPressed && isStanding)

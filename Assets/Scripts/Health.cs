@@ -11,8 +11,8 @@ public class Health : MonoBehaviour
     ScoreKeeper scoreKeeper;
     Player player;
     Animator anim;
-
     AudioPlayer audioPlayer;
+    SpriteRenderer sprite;
 
     private void Awake()
     {
@@ -23,6 +23,7 @@ public class Health : MonoBehaviour
 
     void Start()
     {
+        sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
     }
 
@@ -120,5 +121,18 @@ public class Health : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
         anim.SetBool("isHurting", false);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Water")
+        {
+            Debug.Log("You are sinked deep!");
+            player.rb.velocity = new Vector2(0, 0);
+            player.isAlive = false;
+            sprite.color = new Color(0.454902f, 0.8509804f, 1);
+            // health = 0;
+            anim.SetTrigger("sinked");
+        }
     }
 }

@@ -249,7 +249,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_01_6
+      name: Player_Idle_07
       rect:
         serializedVersion: 2
         x: 0
@@ -270,7 +270,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_01_7
+      name: Player_Idle_08
       rect:
         serializedVersion: 2
         x: 66
@@ -396,11 +396,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_01_13
+      name: Player_Idle_09
       rect:
         serializedVersion: 2
         x: 0
-        y: 202
+        y: 201
         width: 64
         height: 64
       alignment: 0
@@ -669,7 +669,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Hurt_01
+      name: Player_Idle_10
       rect:
         serializedVersion: 2
         x: 0
@@ -690,7 +690,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Hurt_02
+      name: Player_Idle_11
       rect:
         serializedVersion: 2
         x: 66
@@ -976,7 +976,6 @@ TextureImporter:
       Player_01_10: -393987982
       Player_01_11: -923890402
       Player_01_12: -264806421
-      Player_01_13: -284885060
       Player_01_14: -750323926
       Player_01_15: -1452365943
       Player_01_16: 1342314639
@@ -996,23 +995,24 @@ TextureImporter:
       Player_01_37: 1258345824
       Player_01_38: -542147297
       Player_01_39: 1438172386
-      Player_01_6: 118021764
-      Player_01_7: -1453178437
-      Player_01_8: -633280682
-      Player_01_9: 1468753164
-      Player_Hurt_01: 1716320744
-      Player_Hurt_02: -414403084
-      Player_Hurt_03: 893879599
-      Player_Hurt_04: -1394675898
-      Player_Hurt_05: 1511962745
-      Player_Hurt_06: -358265332
-      Player_Hurt_07: -1894356168
-      Player_Idle_01: 754269285
-      Player_Idle_02: -883293435
-      Player_Idle_03: 774012119
-      Player_Idle_04: -1374391568
-      Player_Idle_05: 1105339724
-      Player_Idle_06: 210114797
+      Player_01_8: 1468753164
+      Player_01_9: 1716320744
+      Player_Hurt_03: -1394675898
+      Player_Hurt_04: 1511962745
+      Player_Hurt_05: -358265332
+      Player_Hurt_06: -1894356168
+      Player_Hurt_07: 754269285
+      Player_Idle_01: -883293435
+      Player_Idle_02: 774012119
+      Player_Idle_03: -1374391568
+      Player_Idle_04: 1105339724
+      Player_Idle_05: 210114797
+      Player_Idle_06: 118021764
+      Player_Idle_07: -1453178437
+      Player_Idle_08: -633280682
+      Player_Idle_09: -284885060
+      Player_Idle_10: 1716320744
+      Player_Idle_11: -414403084
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
