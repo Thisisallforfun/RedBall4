@@ -38,12 +38,15 @@ public class Health : MonoBehaviour
 
     void Die()
     {
+        // Events happen when enemy is dead
         if (!isPlayer)
         {
+            audioPlayer.GetInstance().PlayBoomClip();
             anim.SetTrigger("isDead");
             scoreKeeper.ModifyScore(score);
             StartCoroutine(EnemyDead());
         }
+        // Events happen when player is dead
         else
         {
             Destroy(gameObject);
@@ -68,6 +71,7 @@ public class Health : MonoBehaviour
         }
     }
 
+    // Enmy is damaged by player
     void InteractWithPlayer(Collision2D other)
     {
         if (other.gameObject.tag == "Player")
@@ -79,6 +83,7 @@ public class Health : MonoBehaviour
         }
     }
 
+    // Player touch Enemy
     void InteractWithEnemy(Collision2D other)
     {
         if (other.gameObject.tag == "Enemy")
@@ -127,12 +132,12 @@ public class Health : MonoBehaviour
     {
         if (other.gameObject.tag == "Water")
         {
-            Debug.Log("You are sinked deep!");
+            audioPlayer.GetInstance().PlayDrownClip();
             player.rb.velocity = new Vector2(0, 0);
             player.isAlive = false;
             sprite.color = new Color(0.454902f, 0.8509804f, 1);
-            // health = 0;
             anim.SetTrigger("sinked");
         }
     }
+
 }

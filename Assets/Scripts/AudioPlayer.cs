@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AudioPlayer : MonoBehaviour
 {
+    [Header("PLAYER")]
     [Header("Jumping")]
     [SerializeField] AudioClip jumpingClip1;
     [SerializeField] AudioClip jumpingClip2;
@@ -15,6 +16,16 @@ public class AudioPlayer : MonoBehaviour
     [SerializeField] AudioClip hurtClip;
     [SerializeField][Range(0f, 1f)] float hurtVolume = 1f;
 
+    [Header("Drown")]
+    [SerializeField] AudioClip drownClip;
+    [SerializeField][Range(0f, 1f)] float drownVolume = 1f;
+
+    [Header("ENEMY")]
+    [Header("Box Boom")]
+    [SerializeField] AudioClip boxBoomClip;
+    [SerializeField][Range(0f, 1f)] float boxBoomVolume = 1f;
+
+    [Header("SYSTEM")]
     [Header("Finish Level")]
     [SerializeField] AudioClip finishClip;
     [SerializeField][Range(0f, 1f)] float finishVolume = 1f;
@@ -22,6 +33,8 @@ public class AudioPlayer : MonoBehaviour
     [Header("Pick up")]
     [SerializeField] AudioClip starClip;
     [SerializeField][Range(0f, 1f)] float starVolume = 1f;
+
+
 
     static AudioPlayer instance;
 
@@ -82,5 +95,15 @@ public class AudioPlayer : MonoBehaviour
     public void PlayStarClip()
     {
         PlayClip(starClip, starVolume);
+    }
+
+    public void PlayBoomClip()
+    {
+        PlayClip(boxBoomClip, boxBoomVolume);
+    }
+
+    public void PlayDrownClip()
+    {
+        PlayClip(drownClip, drownVolume);
     }
 }

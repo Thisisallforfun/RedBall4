@@ -147,6 +147,10 @@ MonoBehaviour:
   jumpVolume: 0.75
   hurtClip: {fileID: 8300000, guid: 0124f6578d47dcf409feb7368d725fad, type: 3}
   hurtVolume: 0.5
+  drownClip: {fileID: 8300000, guid: 44f7de4a55fc08345bb74322aa98983a, type: 3}
+  drownVolume: 1
+  boxBoomClip: {fileID: 8300000, guid: 35a9a0aa2dade36499658e3570ec4c68, type: 3}
+  boxBoomVolume: 1
   finishClip: {fileID: 8300000, guid: cb246d271a98c554fa2c66ca73ffdb2d, type: 3}
   finishVolume: 1
   starClip: {fileID: 8300000, guid: 78745478aebbdee42939ddd1943fbdf7, type: 3}

@@ -1178,6 +1178,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bd5fe4cf90721346babaa8f6629a19c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &903671710
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 903671711}
+  m_Layer: 0
+  m_Name: --- ENEMIES ---
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &903671711
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903671710}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &945438700
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1463,13 +1494,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wood Box
       objectReference: {fileID: 0}
+    - target: {fileID: 4892754267133247175, guid: 790bec2d7778a8c4b9ed44722c1475fd, type: 3}
+      propertyPath: m_TagString
+      value: Wood Box
+      objectReference: {fileID: 0}
     - target: {fileID: 7635452742566544229, guid: 790bec2d7778a8c4b9ed44722c1475fd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.85
       objectReference: {fileID: 0}
     - target: {fileID: 7635452742566544229, guid: 790bec2d7778a8c4b9ed44722c1475fd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: -2.07
       objectReference: {fileID: 0}
     - target: {fileID: 7635452742566544229, guid: 790bec2d7778a8c4b9ed44722c1475fd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2222,11 +2257,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 66713247137669782, guid: 41615ed3f7a9e254fa560be0aa524d0b, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.54
+      value: 0.5869565
       objectReference: {fileID: 0}
     - target: {fileID: 66713247137669782, guid: 41615ed3f7a9e254fa560be0aa524d0b, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.61
+      value: 0.6630435
       objectReference: {fileID: 0}
     - target: {fileID: 2804492731994705198, guid: 41615ed3f7a9e254fa560be0aa524d0b, type: 3}
       propertyPath: m_Sprite
@@ -2328,10 +2363,11 @@ SceneRoots:
   - {fileID: 839257316}
   - {fileID: 2020637318}
   - {fileID: 2105188528}
-  - {fileID: 1893751961}
   - {fileID: 245727564}
-  - {fileID: 4829351669554466296}
   - {fileID: 1868260705}
+  - {fileID: 1893751961}
+  - {fileID: 903671711}
+  - {fileID: 4829351669554466296}
   - {fileID: 1072004274}
   - {fileID: 1064264686}
   - {fileID: 710587365}

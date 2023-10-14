@@ -20,12 +20,21 @@ public class RollBoxController : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.tag != "Player")
+        if (!other.gameObject.CompareTag("Player"))
         {
             moveSpeed = -moveSpeed;
             FlipEnemyFacing();
         }
     }
+
+    // private void OnCollisionEnter2D(Collision2D other)
+    // {
+    //     if (other.gameObject.CompareTag("Wood Box"))
+    //     {
+    //         moveSpeed = -moveSpeed;
+    //         FlipEnemyFacing();
+    //     }
+    // }
 
     private void FlipEnemyFacing()
     {
