@@ -43,7 +43,7 @@ public class Health : MonoBehaviour
         {
             audioPlayer.GetInstance().PlayBoomClip();
             anim.SetTrigger("isDead");
-            scoreKeeper.ModifyScore(score);
+            scoreKeeper.GetInstance().ModifyScore(score);
             StartCoroutine(EnemyDead());
         }
         // Events happen when player is dead

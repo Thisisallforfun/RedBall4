@@ -15,6 +15,11 @@ public class ScoreKeeper : MonoBehaviour
         ManageSingleton();
     }
 
+    public ScoreKeeper GetInstance()
+    {
+        return instance;
+    }
+
     private void ManageSingleton()
     {
         if (instance != null)
@@ -38,5 +43,10 @@ public class ScoreKeeper : MonoBehaviour
     public int GetScore()
     {
         return score;
+    }
+
+    public void ResetScore()
+    {
+        score = 0;
     }
 }

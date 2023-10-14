@@ -28,7 +28,7 @@ public class Star : MonoBehaviour
         {
             audioPlayer.GetInstance().PlayStarClip();
             wasColected = true;
-            scoreKeeper.ModifyScore(scoreValue);
+            scoreKeeper.GetInstance().ModifyScore(scoreValue);
             Destroy(gameObject);
         }
     }

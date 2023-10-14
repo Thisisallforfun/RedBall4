@@ -75,7 +75,7 @@ public class Player : MonoBehaviour
 
         if (value.isPressed && isStanding)
         {
-            audioPlayer.PlayJumpingClip();
+            audioPlayer.GetInstance().PlayJumpingClip();
             rb.velocity += new Vector2(0f, jumpSpeed);
         }
     }
