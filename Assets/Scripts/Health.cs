@@ -6,6 +6,7 @@ public class Health : MonoBehaviour
 {
     [SerializeField] private bool isPlayer;
     [SerializeField] private int health = 5;
+    [SerializeField] private int life = 3;
     [SerializeField] private int score = 10;
     [SerializeField] private float hurtForce = 5f;
     ScoreKeeper scoreKeeper;
@@ -49,6 +50,7 @@ public class Health : MonoBehaviour
         // Events happen when player is dead
         else
         {
+            audioPlayer.GetInstance().PlayAngelClip();
             Destroy(gameObject);
         }
     }
@@ -128,6 +130,7 @@ public class Health : MonoBehaviour
         anim.SetBool("isHurting", false);
     }
 
+    // Sink water
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Water")
@@ -138,6 +141,16 @@ public class Health : MonoBehaviour
             sprite.color = new Color(0.454902f, 0.8509804f, 1);
             anim.SetTrigger("sinked");
         }
+    }
+
+    public int GetHealth()
+    {
+        return health;
+    }
+
+    public int GetLife()
+    {
+        return life;
     }
 
 }

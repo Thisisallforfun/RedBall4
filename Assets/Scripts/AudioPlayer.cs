@@ -20,6 +20,10 @@ public class AudioPlayer : MonoBehaviour
     [SerializeField] AudioClip drownClip;
     [SerializeField][Range(0f, 1f)] float drownVolume = 1f;
 
+    [Header("Angel")]
+    [SerializeField] AudioClip angelClip;
+    [SerializeField][Range(0f, 1f)] float angelVolume = 1f;
+
     [Header("ENEMY")]
     [Header("Box Boom")]
     [SerializeField] AudioClip boxBoomClip;
@@ -33,6 +37,10 @@ public class AudioPlayer : MonoBehaviour
     [Header("Pick up")]
     [SerializeField] AudioClip starClip;
     [SerializeField][Range(0f, 1f)] float starVolume = 1f;
+
+    [Header("Check point")]
+    [SerializeField] AudioClip checkpointClip;
+    [SerializeField][Range(0f, 1f)] float checkpointVolume = 1f;
 
 
 
@@ -105,5 +113,15 @@ public class AudioPlayer : MonoBehaviour
     public void PlayDrownClip()
     {
         PlayClip(drownClip, drownVolume);
+    }
+
+    public void PlayCheckpoint()
+    {
+        PlayClip(checkpointClip, checkpointVolume);
+    }
+
+    public void PlayAngelClip()
+    {
+        PlayClip(angelClip, angelVolume);
     }
 }
