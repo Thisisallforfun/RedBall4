@@ -670,7 +670,7 @@ Transform:
   m_GameObject: {fileID: 654562507}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.53, y: 0.08, z: -10}
+  m_LocalPosition: {x: 3.52, y: 0.08, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1137,7 +1137,7 @@ Transform:
   m_GameObject: {fileID: 898807445}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.53, y: 0.08, z: -10}
+  m_LocalPosition: {x: 3.52, y: 0.08, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1701,18 +1701,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Audio Player
       objectReference: {fileID: 0}
-    - target: {fileID: 5774128256980406404, guid: 5f09517980866ea4896a7e726d13aed8, type: 3}
-      propertyPath: angelClip
-      value: 
-      objectReference: {fileID: 8300000, guid: da7c32e1b0e30494aa26827bf4187a1e, type: 3}
-    - target: {fileID: 5774128256980406404, guid: 5f09517980866ea4896a7e726d13aed8, type: 3}
-      propertyPath: checkpointClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 883e3df6a099a4046b987f3493d1fe44, type: 3}
-    - target: {fileID: 5774128256980406404, guid: 5f09517980866ea4896a7e726d13aed8, type: 3}
-      propertyPath: checkpointVolume
-      value: 0.65
-      objectReference: {fileID: 0}
     - target: {fileID: 8872482175731144742, guid: 5f09517980866ea4896a7e726d13aed8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1933,7 +1921,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3436880659465861780, guid: 94305c1593a8c944389d555b0a9338fe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.53
+      value: 3.52
       objectReference: {fileID: 0}
     - target: {fileID: 3436880659465861780, guid: 94305c1593a8c944389d555b0a9338fe, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2197,7 +2185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2558845343553789226, guid: ae66006e67446e84e95a65051f796f7f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.87
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2558845343553789226, guid: ae66006e67446e84e95a65051f796f7f, type: 3}
       propertyPath: m_LocalPosition.y
