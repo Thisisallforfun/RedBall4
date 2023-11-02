@@ -33,7 +33,15 @@ public class Health : MonoBehaviour
         health--;
         if (health <= 0)
         {
-            Die();
+            // Die();
+            StartCoroutine(player.Respawn(0.5f));
+            health = 3;
+            life--;
+
+            if (life <= 0)
+            {
+                Die();
+            }
         }
     }
 

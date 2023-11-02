@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     AudioPlayer audioPlayer;
     private float defaultSpeed = 0f;
     public bool isAlive = true;
+    Vector2 checkpointPos;
 
     void Awake()
     {
@@ -29,6 +30,7 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         bodyColl = GetComponent<CircleCollider2D>();
         defaultSpeed = moveSpeed;
+        checkpointPos = transform.position;
     }
 
     private void Update()
@@ -79,4 +81,21 @@ public class Player : MonoBehaviour
             rb.velocity += new Vector2(0f, jumpSpeed);
         }
     }
+
+    public IEnumerator Respawn(float duration)
+    {
+        rb.velocity = new Vector2(0f, 0f);
+        transform.localScale = new Vector3(0f, 0f, 0f);
+        yield return new WaitForSeconds(duration);
+
+        transform.position = checkpointPos;
+        transform.localScale = new Vector3(1, 1, 1);
+    }
+
+    public void UpdateCheckpoint(Vector2 pos)
+    {
+        checkpointPos = pos;
+    }
+
+
 }
